@@ -8,7 +8,7 @@
     <ul class="list-group mb-5">
       {% for vehicle in latest_vehicle_list %}
       <li class="list-group-item">
-        {{ vehicle.placa_text }} {{ vehicle.vehicle_type }}
+        <p>Placa: {{ vehicle.placa_text }}</p> <p>Tipo de vehiculo: {{ vehicle.vehicle_type }}</p> <p>Fecha y hora de ingreso: {{ vehicle.pub_date }}</p>
       </li>
       {% endfor %}
     </ul>

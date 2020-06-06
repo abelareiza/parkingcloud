@@ -7,7 +7,6 @@ class Vehicle(models.Model):
         ('Moto', 'Moto'),
   )
   vehicle_type = models.CharField(max_length=5, choices=VEHICLE_TYPE)
-  
   pub_date = models.DateTimeField('date published')
 
   def __str__(self):
