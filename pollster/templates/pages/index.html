@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="card text-center">
+  <div class="card-body">
+    <h1>Bienvenido a Parking Cloud</h1>
+    <p>Su aplicación para gestión de parqueaderos confiable</p>
+    <ul class="list-group mb-5">
+      {% for vehicle in latest_vehicle_list %}
+      <li class="list-group-item">
+        {{ vehicle.placa_text }} {{ vehicle.vehicle_type }}
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+  </div>
+{% endblock %}
