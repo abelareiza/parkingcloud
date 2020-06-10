@@ -4,14 +4,25 @@
 <div class="card text-center">
   <div class="card-body">
     <h1>Bienvenido a Parking Cloud</h1>
-    <p>Su aplicación para gestión de parqueaderos confiable</p>
-    <ul class="list-group mb-5">
-      {% for vehicle in latest_vehicle_list %}
-      <li class="list-group-item">
-        <p>Placa: {{ vehicle.placa_text }}</p> <p>Tipo de vehiculo: {{ vehicle.vehicle_type }}</p> <p>Fecha y hora de ingreso: {{ vehicle.pub_date }}</p>
-      </li>
-      {% endfor %}
-    </ul>
+      <table class="table table-striped table-dark">
+        <thead>
+          <tr>
+            <th scope="col">Placa</th>
+            <th scope="col">Tipo</th>
+            <th scope="col">Fecha y hora</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for vehicle in latest_vehicle_list %}
+            <tr>
+             <td>{{ vehicle.placa_text }}</td>
+             <td>{{ vehicle.vehicle_type }}</td>
+             <td>{{ vehicle.pub_date }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+      </table>
   </div>
-  </div>
+</div>
+
 {% endblock %}
